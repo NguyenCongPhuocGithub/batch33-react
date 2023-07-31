@@ -1,0 +1,31 @@
+/*build Basic01 */
+.inline{
+    display: inline-flex;
+    margin : 0 10px;
+    color: gray;
+}
+
+.border{
+    border: 2px solid rgb(207, 206, 206);
+}
+
+.border:hover {
+    border: 2px solid rgb(13, 12, 12);
+    background: rgb(199, 193, 193);
+}
+
+/* End build Basic01 */
+
+/*build Basic02 */
+.bold{
+    font-weight: bold;
+    color: #111;
+    column-gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+svg{
+    color: #6595D0;
+}
+/* End build Basic02 */

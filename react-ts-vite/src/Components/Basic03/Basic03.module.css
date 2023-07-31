@@ -1,0 +1,21 @@
+.button{
+    /* padding: 10px 120px; */
+    background-color: #f80;
+    color: #fff;
+    /* text-align: center; */
+    justify-content: center;
+    border: none;
+    display: inline-flex;
+    margin-right: 10px;
+    width: 300px
+    /* inline sẽ không nhận text-align */
+}
+
+.button.button_dark {
+    background-color: #212121;
+}
+
+button svg{
+    color: aliceblue;
+    margin-right: 10px;
+}

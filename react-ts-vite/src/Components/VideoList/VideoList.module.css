@@ -1,0 +1,36 @@
+.video_item {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.video_item .thumb {
+    width: 144px;
+    height: 81px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.video_item .thumb img {
+    width: 100%;
+    height: auto;
+}
+
+.video_item .content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.video_item .like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+
+.video_item .like svg{
+    color: rgb(173, 170, 170);
+}
