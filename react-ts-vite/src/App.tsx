@@ -11,6 +11,8 @@ import Product from './Components/Product';
 import NavigationBar from './Components/NavigationBar'
 import VideoList from './Components/VideoList';
 import ListNotable from './Components/ListNotable'
+import ProductsList from './Components/ProductsList';
+import NavigationsBar from './Components/NavigationsBar';
 
 
 
@@ -73,11 +75,19 @@ function App() {
     {/* basic 07 */}
     <div>Basic07</div>
     <VideoList />
-    {/* end basic 08 */}
+    {/* end basic 07 */}
+     {/* basic 08 */}
     <div>Basic08</div>
-    {/* <h2>Notable Scientists</h2> */}
     <ListNotable />
     {/* end basic 08 */}
+    {/* build NavigationsBar */}
+    <div>NavigationsBar</div>
+    <NavigationsBar/>
+    {/* end build NavigationsBar */}
+    {/* ProductList */}
+    <div>ProductList</div>
+    <ProductsList />
+    {/* ProductList */}
     </>
   )
 }
