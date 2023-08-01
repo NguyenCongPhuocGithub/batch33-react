@@ -1,5 +1,5 @@
 import React from "react";
-import {products} from  './../../data/products'
+import { products } from './../../data/products'
 import styles from './ProductsList.module.css'
 
 type ProductItemType = {
@@ -10,7 +10,7 @@ type ProductItemType = {
   thumb: string;
 };
 
-const ProductItem = ({product}: {product: ProductItemType} ) => {
+const ProductItem = ({ product }: { product: ProductItemType }) => {
   let discount = 0;
   if (product.promoPrice > 0) {
     discount = 100 - (100 * product.promoPrice) / product.price;
@@ -39,16 +39,19 @@ const ProductItem = ({product}: {product: ProductItemType} ) => {
 
 const ProductsList = () => {
 
-    //Có thể dùng hàm filter để lọc lại danh sách
-    // const promoProducts = products.filter(product => product.promoPrice === 0)
+  //Có thể dùng hàm filter để lọc lại danh sách
+  // const promoProducts = products.filter(product => product.promoPrice === 0)
 
-  return <div className={styles.product_wrapper}>
-        {
-            products.map((item) =>{
-                return <ProductItem key={`ProductsList_${item.id}`} product={item} />
-            })
-        }
-  </div>;
+  return (
+    <div className={styles.product_wrapper}>
+      {
+        products.map((item) => {
+          return <ProductItem key={`ProductsList_${item.id}`} product={item} />
+        })
+      }
+    </div>
+  )
+
 };
 
 export default ProductsList;
