@@ -1,5 +1,6 @@
 import styles from './ListNotable.module.css';
-import { notables } from '../../data/notables'
+import { notables } from '../../data/notables';
+
 // type InfoItem = {
 //     title : string,
 //     desc : string
@@ -34,20 +35,20 @@ function NotableItem({ notable }: { notable: NotableType }) {
             <div>
                 <li>
                     <div className={styles.content}>
-                        <h4>Profession:</h4>
-                        <div>{notable.Profession}</div>
+                        <strong>Profession:</strong>
+                        <span>{notable.Profession}</span>
                     </div>
                 </li>
                 <li>
                     <div className={styles.content}>
-                        <h4>Awards:</h4>
-                        <div>{notable.Awards}</div>
+                        <strong>Awards:</strong>
+                        <span>{notable.Awards}</span>
                     </div>
                 </li>
                 <li>
                     <div className={styles.content}>
-                        <h4>Discovered:</h4>
-                        <div>{notable.Discovered}</div>
+                        <strong>Discovered:</strong>
+                        <span>{notable.Discovered}</span>
                     </div>
                 </li>
             </div>
@@ -63,7 +64,8 @@ function NotableList() {
                     return (
                         <NotableItem key={`NotableList${item}`} notable = {item}/>
                     )
-                })
+                }
+                )
             }
             {/* <NotableItem name='Maria Sklodowska-Curie' avatarID='szV5sdG' size='s'
                 Profession='physicist and chemist' Awards='4 (Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)'
@@ -76,5 +78,6 @@ function NotableList() {
         </ul>
     )
 }
+  
 
 export default NotableList

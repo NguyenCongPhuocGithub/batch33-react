@@ -70,8 +70,27 @@ function cal(a:number,b:number, type: string = 'add'){
 cal(1,3)
 
 //hàm với tham số tùy chọn
-function add(a: number, b: number, c?: number) {
-    return a + b + (c || 0);
+function add({a,b} : {a:number,b:number}) {
+    return a + b;
   }
 
-add(1,2)
+
+type ButtonType = {
+    label: string,
+    type?: string,
+}
+//B1 định nghĩa
+//default prop cách 2
+function Button(label:string, type ?: string){
+
+    let class_button = 'button';
+    if(type && type === 'dark'){
+        class_button = 'button button-dark';
+    }else if(type &&type === 'outline'){
+        class_button = 'button button-outline';
+    }
+}
+
+function sum({ a, b, c }: { a : number, b : number, c ?: number }) {
+    return a + b + (c || 0);
+  }

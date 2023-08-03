@@ -7,11 +7,12 @@ type VideoItemType = {
     thumb: string,
     title: string,
     desc: string,
-    icon: React.ReactNode
+    icon: string
     // colorIcon ?: string
 }
 
 function VideoItem({ video }: {video : VideoItemType}) {
+    const Icon = video.icon // Icon lúc này là component
     return (
         <li className={styles.video_item}>
             <div className={styles.thumb}>
@@ -23,7 +24,7 @@ function VideoItem({ video }: {video : VideoItemType}) {
             </div>
             <div className={styles.like}>
                 {/* {`<${video.icon}/>`} */}
-                <React.Fragment>{video.icon}</React.Fragment>
+                <Icon/>
             </div>
         </li>
     )
